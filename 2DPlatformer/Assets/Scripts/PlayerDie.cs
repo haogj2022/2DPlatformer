@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class PlayerDie : MonoBehaviour
 {
     public GameObject playerDie;
+    private float delay = 2f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,7 +20,7 @@ public class PlayerDie : MonoBehaviour
         playerDie.transform.localScale = transform.localScale;
         playerDie.SetActive(true);
         gameObject.SetActive(false);
-        Invoke("ReloadScene", 2f);
+        Invoke("ReloadScene", delay);
     }
 
     void ReloadScene()

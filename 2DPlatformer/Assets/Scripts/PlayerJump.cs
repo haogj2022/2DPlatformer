@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-    public float jumpForce = 8f;
+    public float jumpForce = 5f;
     private Rigidbody2D rb;
 
     void Start()

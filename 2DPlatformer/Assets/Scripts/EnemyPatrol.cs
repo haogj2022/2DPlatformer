@@ -5,6 +5,7 @@ public class EnemyPatrol : MonoBehaviour
     public Transform[] waypoints; // Assign waypoints from the editor
     private int waypointIndex = 0;
     public float moveSpeed = 3f;
+    public bool flipEnabled = true; // Option to enable or disable flipping
 
     void Update()
     {
@@ -37,16 +38,19 @@ public class EnemyPatrol : MonoBehaviour
 
     void Flip()
     {
-        if (waypointIndex < waypoints.Length)
+        if (flipEnabled)
         {
-            Vector2 targetPosition = waypoints[waypointIndex].position;
-            if (targetPosition.x < transform.position.x)
+            if (waypointIndex < waypoints.Length)
             {
-                transform.localScale = new Vector3(-1, 1, 1); // Flip left
-            }
-            else
-            {
-                transform.localScale = new Vector3(1, 1, 1); // Flip right
+                Vector2 targetPosition = waypoints[waypointIndex].position;
+                if (targetPosition.x < transform.position.x)
+                {
+                    transform.localScale = new Vector3(-1, 1, 1); // Flip left
+                }
+                else
+                {
+                    transform.localScale = new Vector3(1, 1, 1); // Flip right
+                }
             }
         }
     }
