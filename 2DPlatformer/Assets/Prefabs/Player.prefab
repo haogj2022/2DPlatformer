@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 8848577000430116990}
   - component: {fileID: 6312141476355174711}
   - component: {fileID: 2948346388444435030}
+  - component: {fileID: 8666427842829812313}
+  - component: {fileID: 7558431404772557598}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -190,3 +192,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDie: {fileID: 0}
+--- !u!114 &8666427842829812313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3409993012854858661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c1925476b46d54490d5d804727c32d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinValue: 1
+  coinText: {fileID: 0}
+--- !u!95 &7558431404772557598
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3409993012854858661}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 46381018b4f9ca84bb52c93d1ed54fd6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

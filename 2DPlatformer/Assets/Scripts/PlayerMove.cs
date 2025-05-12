@@ -4,10 +4,12 @@ public class PlayerMove : MonoBehaviour
 {
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
+    private Animator anim;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -26,11 +28,17 @@ public class PlayerMove : MonoBehaviour
     {
         if (rb.velocity.x > 0)
         {
+            anim.SetBool("Run", true); // Set the running animation
             transform.localScale = new Vector3(-1, 1, 1); // Flip the player to face right
         }
         else if (rb.velocity.x < 0)
         {
+            anim.SetBool("Run", true); // Set the running animation
             transform.localScale = new Vector3(1, 1, 1); // Flip the player to face left
+        }
+        else
+        {
+            anim.SetBool("Run", false); // Set the idle animation
         }
     }
 }

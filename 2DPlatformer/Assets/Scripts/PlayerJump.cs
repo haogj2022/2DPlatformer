@@ -4,10 +4,12 @@ public class PlayerJump : MonoBehaviour
 {
     public float jumpForce = 5f;
     private Rigidbody2D rb;
+    private Animator anim;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -20,6 +22,14 @@ public class PlayerJump : MonoBehaviour
         if (IsGrounded() && Input.GetButtonDown("Jump"))
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+        if (!IsGrounded())
+        {
+            anim.SetBool("Jump", true);
+        }
+        else
+        {
+            anim.SetBool("Jump", false);
         }
     }
 

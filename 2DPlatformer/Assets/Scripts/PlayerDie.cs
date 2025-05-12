@@ -14,6 +14,14 @@ public class PlayerDie : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("CannonBall"))
+        {
+            Die();
+        }
+    }
+
     void Die()
     {
         playerDie.transform.position = transform.position;
