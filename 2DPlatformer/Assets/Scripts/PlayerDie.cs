@@ -6,17 +6,17 @@ public class PlayerDie : MonoBehaviour
     public GameObject playerDie;
     private float delay = 2f;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             Die();
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("CannonBall"))
+        if (other.CompareTag("Enemy"))
         {
             Die();
         }

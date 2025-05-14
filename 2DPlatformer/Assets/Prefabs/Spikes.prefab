@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4104275801793551355}
   - component: {fileID: 1861097485445851593}
-  - component: {fileID: 5032900135238662900}
+  - component: {fileID: 1340094109854823303}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Enemy
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &5032900135238662900
+--- !u!70 &1340094109854823303
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +114,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Coin
-  - CannonBall
+  - EnemyHead
   layers:
   - Default
   - TransparentFX
