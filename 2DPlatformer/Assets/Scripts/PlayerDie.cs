@@ -24,9 +24,8 @@ public class PlayerDie : MonoBehaviour
 
     void Die()
     {
-        playerDie.transform.position = transform.position;
-        playerDie.transform.localScale = transform.localScale;
-        playerDie.SetActive(true);
+        Instantiate(playerDie, transform.position, Quaternion.identity);
+        playerDie.transform.localScale = gameObject.transform.localScale;
         gameObject.SetActive(false);
         Invoke("ReloadScene", delay);
     }

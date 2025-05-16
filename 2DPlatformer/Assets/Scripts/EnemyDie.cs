@@ -8,8 +8,8 @@ public class EnemyDie : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            gameObject.SetActive(false);
             Instantiate(coin, transform.position, Quaternion.identity);
+            Destroy(gameObject); // Destroy the enemy game object
         }
     }
 }
