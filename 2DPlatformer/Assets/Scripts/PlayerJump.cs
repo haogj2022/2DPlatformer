@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-    public float jumpForce = 8f;
+    public float jumpForce = 9f;
     private float bounceForce = 12f;
     private Rigidbody2D rb;
     private Animator anim;
@@ -23,6 +23,13 @@ public class PlayerJump : MonoBehaviour
         if (IsGrounded() && Input.GetButtonDown("Jump"))
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+        //add extra force if player hold down jump button
+        else {
+            if (Input.GetButton("Jump") && rb.velocity.y > 0)
+            {
+                rb.AddForce(Vector2.up * jumpForce * Time.deltaTime, ForceMode2D.Impulse);
+            }
         }
 
         if (!IsGrounded())

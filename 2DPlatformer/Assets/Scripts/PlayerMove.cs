@@ -23,7 +23,7 @@ public class PlayerMove : MonoBehaviour
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
-        if (moveInput != 0 && rb.velocity.y == 0)
+        if (moveInput != 0)
         {
             anim.SetBool("Run", true);
         }
