@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerJump : MonoBehaviour
 {
     public float jumpForce = 9f;
-    private float bounceForce = 12f;
+    private float bounceForce = 18f;
     private Rigidbody2D rb;
     private Animator anim;
 
