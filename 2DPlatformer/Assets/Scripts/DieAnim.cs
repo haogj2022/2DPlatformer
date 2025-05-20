@@ -9,5 +9,11 @@ public class DieAnim : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        Invoke("SelfDestroy", 2f);
+    }
+
+    void SelfDestroy()
+    {
+        Destroy(gameObject);
     }
 }

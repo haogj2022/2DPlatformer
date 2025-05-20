@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerJump : MonoBehaviour
 {
     public float jumpForce = 9f;
-    private float bounceForce = 18f;
     private Rigidbody2D rb;
     private Animator anim;
 
@@ -51,7 +50,7 @@ public class PlayerJump : MonoBehaviour
     {
         if (other.CompareTag("EnemyHead"))
         {
-            rb.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
 }

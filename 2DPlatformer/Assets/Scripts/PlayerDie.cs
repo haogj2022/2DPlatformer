@@ -1,10 +1,10 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerDie : MonoBehaviour
 {
     public GameObject playerDie;
-    private float delay = 2f;
+    public Vector2 respawnPosition = new Vector2(-4f, 0f);
+    public float respawnDelay = 2f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -27,11 +27,12 @@ public class PlayerDie : MonoBehaviour
         Instantiate(playerDie, transform.position, Quaternion.identity);
         playerDie.transform.localScale = gameObject.transform.localScale;
         gameObject.SetActive(false);
-        Invoke("ReloadScene", delay);
+        Invoke("Respawn", respawnDelay);
     }
 
-    void ReloadScene()
+    private void Respawn()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        gameObject.SetActive(true);
+        gameObject.transform.position = respawnPosition;
     }
 }

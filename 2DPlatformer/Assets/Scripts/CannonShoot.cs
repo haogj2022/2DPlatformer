@@ -8,9 +8,12 @@ public class CannonShoot : MonoBehaviour
     public float shootInterval = 2f;
     private float shootTimer;
 
+    private Rigidbody2D cannonBodyRb;
+
     void Start()
     {
         shootTimer = shootInterval;
+        cannonBodyRb = GetComponentInParent<Rigidbody2D>();
     }
 
     void Update()
@@ -28,12 +31,14 @@ public class CannonShoot : MonoBehaviour
         GameObject cannonBall = objectPool.GetObject();
         cannonBall.transform.position = transform.position;
         cannonBall.transform.rotation = transform.rotation;
-        Rigidbody2D rb = cannonBall.GetComponent<Rigidbody2D>();
-        rb.velocity = Vector2.zero;
+        Rigidbody2D cannonBallRb = cannonBall.GetComponent<Rigidbody2D>();
+        cannonBallRb.velocity = Vector2.zero;
 
-        if (rb != null)
+        if (cannonBallRb != null)
         {
-            rb.AddForce(transform.right * shootForce, ForceMode2D.Impulse);
+            cannonBallRb.AddForce(transform.right * shootForce, ForceMode2D.Impulse);
+            //add force to the cannon itself
+            cannonBodyRb.AddForce(-transform.right * shootForce * 0.5f, ForceMode2D.Impulse);
         }
     }
 }
