@@ -20,12 +20,22 @@ public class PlayerDie : MonoBehaviour
         {
             Die();
         }
+
+        if (other.CompareTag("Checkpoint"))
+        {
+            other.GetComponent<Animator>().SetTrigger("Activate");
+            SaveGame();
+        }
+    }
+
+    private void SaveGame()
+    {
+        respawnPosition = transform.position;
     }
 
     void Die()
     {
         Instantiate(playerDie, transform.position, Quaternion.identity);
-        playerDie.transform.localScale = gameObject.transform.localScale;
         gameObject.SetActive(false);
         Invoke("Respawn", respawnDelay);
     }
