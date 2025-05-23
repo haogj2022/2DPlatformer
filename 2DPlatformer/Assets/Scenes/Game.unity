@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &1483118716
+--- !u!1001 &1729556284
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -131,29 +131,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 760920420786095168, guid: 413fbe186b353304aa013d2bf428c61a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.11111307
-      objectReference: {fileID: 0}
-    - target: {fileID: 760920420786095168, guid: 413fbe186b353304aa013d2bf428c61a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.00000035762787
-      objectReference: {fileID: 0}
     - target: {fileID: 3245268548617945364, guid: 413fbe186b353304aa013d2bf428c61a, type: 3}
       propertyPath: m_Name
       value: Level 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3879581363571584762, guid: 413fbe186b353304aa013d2bf428c61a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3879581363571584762, guid: 413fbe186b353304aa013d2bf428c61a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7176746419190617316, guid: 413fbe186b353304aa013d2bf428c61a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7699236014214969982, guid: 413fbe186b353304aa013d2bf428c61a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -195,14 +175,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9108988699636983669, guid: 413fbe186b353304aa013d2bf428c61a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9108988699636983669, guid: 413fbe186b353304aa013d2bf428c61a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.9999996
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -227,4 +199,4 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1483118716}
+  - {fileID: 1729556284}

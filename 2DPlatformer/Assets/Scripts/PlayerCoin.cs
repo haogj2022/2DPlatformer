@@ -13,7 +13,7 @@ public class PlayerCoin : MonoBehaviour
         {
             coinCount += coinValue; // Increment the coin count
             coinText.text = coinCount.ToString(); // Update the UI text with the coin value
-            collision.gameObject.SetActive(false);
+            Destroy(collision.gameObject); // Destroy the coin object
         }
     }
 }

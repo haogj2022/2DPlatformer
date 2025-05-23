@@ -3,8 +3,13 @@ using UnityEngine;
 public class PlayerDie : MonoBehaviour
 {
     public GameObject playerDie;
-    public Vector2 respawnPosition = new Vector2(-4f, 0f);
-    public float respawnDelay = 2f;
+    public DeathPanel deathPanel;
+    private Vector2 respawnPosition;
+
+    private void Start()
+    {
+        respawnPosition = transform.position;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -36,8 +41,9 @@ public class PlayerDie : MonoBehaviour
     void Die()
     {
         Instantiate(playerDie, transform.position, Quaternion.identity);
+        deathPanel.Show();
         gameObject.SetActive(false);
-        Invoke("Respawn", respawnDelay);
+        Invoke("Respawn", 4f);
     }
 
     private void Respawn()
