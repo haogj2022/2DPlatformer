@@ -31,6 +31,7 @@ public class CannonShoot : MonoBehaviour
         GameObject cannonBall = objectPool.GetObject();
         cannonBall.transform.position = transform.position;
         cannonBall.transform.rotation = transform.rotation;
+        cannonBall.tag = "Enemy";
         Rigidbody2D cannonBallRb = cannonBall.GetComponent<Rigidbody2D>();
         cannonBallRb.velocity = Vector2.zero;
 
