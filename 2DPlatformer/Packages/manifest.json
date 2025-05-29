@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.qiaozhilei.easy-text-effects": "https://github.com/LeiQiaoZhi/Easy-Text-Effect.git",
     "com.unity.cinemachine": "2.9.7",
     "com.unity.collab-proxy": "2.7.1",
     "com.unity.feature.2d": "2.0.0",
@@ -11,7 +12,7 @@
     "com.unity.textmeshpro": "3.0.9",
     "com.unity.timeline": "1.7.7",
     "com.unity.ugui": "1.0.0",
-    "com.unity.visualscripting": "1.9.6",
+    "com.unity.visualscripting": "1.9.7",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",

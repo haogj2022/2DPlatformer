@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &1729556284
+--- !u!1001 &939511606
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -199,4 +199,4 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1729556284}
+  - {fileID: 939511606}
