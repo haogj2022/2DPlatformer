@@ -5,11 +5,18 @@ public class MainMenu : MonoBehaviour
 {
     public Animator levelMenu;
     public Animator transition;
+    public GameManager gameManager;
+    private bool canSelectLevel = true;
 
     public void SelectLevel(int levelIndex)
     {
-        transition.SetTrigger("Play");
-        Invoke("LoadGame", 1f); // Wait for the animation to finish before loading the scene
+        if (levelIndex > 0 && canSelectLevel)
+        {
+            canSelectLevel = false;
+            gameManager.SelectLevel(levelIndex - 1); // Adjusting for zero-based index
+            transition.SetTrigger("Play");
+            Invoke("LoadGame", 1f); // Wait for the animation to finish before loading the scene
+        }
     }
 
     public void StartGame()
