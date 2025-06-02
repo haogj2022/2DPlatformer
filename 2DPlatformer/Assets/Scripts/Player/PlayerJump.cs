@@ -48,7 +48,7 @@ public class PlayerJump : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("EnemyHead"))
+        if (other.CompareTag("EnemyHead") && rb.velocity.y < 0)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
