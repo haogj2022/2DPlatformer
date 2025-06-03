@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerDie : MonoBehaviour
 {
     public GameObject playerDie;
-    public DeathPanel deathPanel;
+    public DeathMenu deathMenu;
     private Vector2 respawnPosition;
 
     private void Start()
@@ -41,7 +41,7 @@ public class PlayerDie : MonoBehaviour
     void Die()
     {
         Instantiate(playerDie, transform.position, Quaternion.identity);
-        deathPanel.Show();
+        deathMenu.Show();
         gameObject.SetActive(false);
         Invoke("Respawn", 4f);
     }

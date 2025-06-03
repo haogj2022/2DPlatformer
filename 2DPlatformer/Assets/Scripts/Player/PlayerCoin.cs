@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class PlayerCoin : MonoBehaviour
 {
-    [SerializeField] private int coinValue = 1; // Value of the coin
-    public TMP_Text coinText; // Reference to the UI text component
-    private int coinCount = 0; // Total coins collected
+    [SerializeField] private int coinValue = 1;
+    public TMP_Text coinText;
+
+    [HideInInspector]
+    public int coinCount = 0;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

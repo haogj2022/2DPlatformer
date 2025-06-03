@@ -1,15 +1,13 @@
 using TMPro;
 using UnityEngine;
 
-public class DeathPanel : MonoBehaviour
+public class DeathMenu : MonoBehaviour
 {
-    private float deathCount = 0f;
-    private TMP_Text deathCountText;
+    [HideInInspector]
+    public int deathCount = 0;
 
-    void Start()
-    {
-        deathCountText = GetComponentInChildren<TMP_Text>();
-    }
+    public GameObject deathPanel;
+    public TMP_Text deathCountText;
 
     public void Show()
     {
@@ -18,7 +16,7 @@ public class DeathPanel : MonoBehaviour
 
     public void ShowDeathCount()
     {
-        gameObject.SetActive(true);
+        deathPanel.SetActive(true);
         Invoke("UpdateDeathCount", 1f);
     }
 
@@ -31,6 +29,6 @@ public class DeathPanel : MonoBehaviour
 
     public void HideDeathPanel()
     {
-        gameObject.SetActive(false);
+        deathPanel.SetActive(false);
     }
 }
