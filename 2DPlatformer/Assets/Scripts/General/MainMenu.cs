@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     public Animator levelMenu;
     public Animator transition;
-    public GameManager gameManager;
+    public LevelManager gameManager;
     private bool canSelectLevel = true;
 
     public void SelectLevel(int levelIndex)
