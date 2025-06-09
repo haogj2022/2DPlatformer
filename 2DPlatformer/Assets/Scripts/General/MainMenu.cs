@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public Animator levelMenu;
+    public Animator mainMenu;
     public Animator transition;
-    public LevelManager gameManager;
+    public LevelManager levelManager;
     private bool canSelectLevel = true;
     private float delay = 1f;
 
@@ -14,20 +14,30 @@ public class MainMenu : MonoBehaviour
         if (levelIndex > 0 && canSelectLevel)
         {
             canSelectLevel = false;
-            gameManager.SelectLevel(levelIndex - 1);
+            levelManager.SelectLevel(levelIndex - 1);
             transition.SetTrigger("Play");
             Invoke("LoadGame", delay);
         }
     }
 
-    public void StartGame()
+    public void OpenLevel()
     {
-        levelMenu.SetTrigger("Open");
+        mainMenu.SetTrigger("OpenLevel");
     }
 
-    public void GoBack()
+    public void OpenOptions()
     {
-        levelMenu.SetTrigger("Close");
+        mainMenu.SetTrigger("OpenOptions");
+    }
+
+    public void CloseLevel()
+    {
+        mainMenu.SetTrigger("CloseLevel");
+    }
+
+    public void CloseOptions()
+    {
+        mainMenu.SetTrigger("CloseOptions");
     }
 
     private void LoadGame()

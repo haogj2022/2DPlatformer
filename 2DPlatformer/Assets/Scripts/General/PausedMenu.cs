@@ -1,24 +1,27 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class OptionsMenu : MonoBehaviour
+public class PausedMenu : MonoBehaviour
 {
-    public Animator optionsMenu;
+    public GameObject pausedPanel;
     public Animator transition;
     private float delay = 1f;
 
-    public void OpenOptions()
+    public void Paused()
     {
-        optionsMenu.SetTrigger("Open");
+        Time.timeScale = 0;
+        pausedPanel.SetActive(true);
     }
 
-    public void CloseOptions()
+    public void Continue()
     {
-        optionsMenu.SetTrigger("Close");
+        Time.timeScale = 1;
+        pausedPanel.SetActive(false);
     }
 
     public void MainMenu()
     {
+        Time.timeScale = 1;
         transition.SetTrigger("Play");
         Invoke("LoadMainMenu", delay);
     }
