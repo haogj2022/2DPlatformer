@@ -9,22 +9,24 @@ public class DeathMenu : MonoBehaviour
     public GameObject deathPanel;
     public TMP_Text deathCountText;
 
+    private float delay = 2f;
+
     public void Show()
     {
-        Invoke("ShowDeathCount", 2f);
+        Invoke("ShowDeathCount", delay);
     }
 
     public void ShowDeathCount()
     {
         deathPanel.SetActive(true);
-        Invoke("UpdateDeathCount", 1f);
+        Invoke("UpdateDeathCount", delay / 2);
     }
 
     public void UpdateDeathCount()
     {
         deathCount++;
         deathCountText.text = "X" + deathCount;
-        Invoke("HideDeathPanel", 1f);
+        Invoke("HideDeathPanel", delay / 2);
     }
 
     public void HideDeathPanel()

@@ -7,15 +7,16 @@ public class MainMenu : MonoBehaviour
     public Animator transition;
     public LevelManager gameManager;
     private bool canSelectLevel = true;
+    private float delay = 1f;
 
     public void SelectLevel(int levelIndex)
     {
         if (levelIndex > 0 && canSelectLevel)
         {
             canSelectLevel = false;
-            gameManager.SelectLevel(levelIndex - 1); // Adjusting for zero-based index
+            gameManager.SelectLevel(levelIndex - 1);
             transition.SetTrigger("Play");
-            Invoke("LoadGame", 1f); // Wait for the animation to finish before loading the scene
+            Invoke("LoadGame", delay);
         }
     }
 

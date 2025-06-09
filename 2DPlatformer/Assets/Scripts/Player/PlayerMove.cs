@@ -37,11 +37,11 @@ public class PlayerMove : MonoBehaviour
     {
         if (rb.velocity.x > 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1); // Flip the player to face right
+            transform.localScale = new Vector3(-1, 1, 1);
         }
         else if (rb.velocity.x < 0)
         {
-            transform.localScale = new Vector3(1, 1, 1); // Flip the player to face left
+            transform.localScale = new Vector3(1, 1, 1);
         }
     }
 }

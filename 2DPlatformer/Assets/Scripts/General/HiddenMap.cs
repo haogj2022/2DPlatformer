@@ -7,7 +7,6 @@ public class HiddenMap : MonoBehaviour
 
     void Start()
     {
-        // Get the TilemapRenderer component attached to this GameObject
         tilemapRenderer = GetComponent<TilemapRenderer>();
     }
 
@@ -15,7 +14,6 @@ public class HiddenMap : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            // Disable the game object when the player enters the trigger
             tilemapRenderer.enabled = false;
         }
     }
@@ -24,7 +22,6 @@ public class HiddenMap : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            // Enable the game object when the player exits the trigger
             tilemapRenderer.enabled = true;
         }
     }

@@ -750,7 +750,7 @@ Transform:
   m_GameObject: {fileID: 913797274741142661}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89, y: 20, z: 0}
+  m_LocalPosition: {x: 89.5, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -813,17 +813,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f9fc2312fef094496c081d85e6be7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalCoins: 47
-  completeTime: {fileID: 6188264925183656549}
-  coinsCollected: {fileID: 1709134534070138576}
   completionStats: {fileID: 3929093897350768963}
   nextButton: {fileID: 3391173812868078165}
   returnButton: {fileID: 2520083321589203621}
   transition: {fileID: 1783359208557225946}
   starConditionTexts:
+  - {fileID: 6188264925183656549}
   - {fileID: 2792663567234711131}
   - {fileID: 1709134534070138576}
   starConditionImages:
+  - {fileID: 5938754010454041125}
   - {fileID: 4193537185758245061}
   - {fileID: 1626377545290237194}
   starRatings:
@@ -1311,7 +1310,7 @@ Transform:
   m_GameObject: {fileID: 2132765416487392750}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.843737, y: 0.00000035762787, z: -10}
+  m_LocalPosition: {x: -0.11111307, y: 0.00000035762787, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3460,7 +3459,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 1500, y: 100}
+  m_SizeDelta: {x: 1100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2383877232292801072
 CanvasRenderer:
@@ -3490,7 +3489,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: COMPLETED WITH NO DEATH
+  m_text: COLLECTED COINS (00/00)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac09389c8b5eccd498fbfd00ebbc8aba, type: 2}
   m_sharedMaterial: {fileID: -3250799988189119, guid: ac09389c8b5eccd498fbfd00ebbc8aba, type: 2}
@@ -16301,7 +16300,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 150}
-  m_SizeDelta: {x: 1500, y: 100}
+  m_SizeDelta: {x: 1100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6409207068801470959
 CanvasRenderer:
@@ -16331,7 +16330,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: REACHED THE END (00:00)
+  m_text: FINISHED LEVEL (00:00)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac09389c8b5eccd498fbfd00ebbc8aba, type: 2}
   m_sharedMaterial: {fileID: -3250799988189119, guid: ac09389c8b5eccd498fbfd00ebbc8aba, type: 2}
@@ -16665,7 +16664,6 @@ GameObject:
   - component: {fileID: 3393853668897808731}
   - component: {fileID: 8653478869914047382}
   - component: {fileID: 4931796156779701781}
-  - component: {fileID: 2230118974628593131}
   m_Layer: 5
   m_Name: Options Button
   m_TagString: Untagged
@@ -16787,27 +16785,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!95 &2230118974628593131
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6086578544889797658}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a7846bd2477e3c444bf27c3bc1a20b70, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6089616132737827515
 GameObject:
   m_ObjectHideFlags: 0
@@ -19651,7 +19628,7 @@ Transform:
   m_GameObject: {fileID: 7812610858981962239}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.0000005, y: -1.9999996, z: -10}
+  m_LocalPosition: {x: -4, y: -1.9999996, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19817,7 +19794,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 1500, y: 100}
+  m_SizeDelta: {x: 1100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2033030608416657330
 CanvasRenderer:
@@ -19847,7 +19824,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: COLLECTED ALL COINS (0/0)
+  m_text: KILLED GHOSTS (00/00)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac09389c8b5eccd498fbfd00ebbc8aba, type: 2}
   m_sharedMaterial: {fileID: -3250799988189119, guid: ac09389c8b5eccd498fbfd00ebbc8aba, type: 2}
@@ -19959,7 +19936,7 @@ GameObject:
   - component: {fileID: 8807540946668120268}
   - component: {fileID: 1912935342310220623}
   m_Layer: 5
-  m_Name: Level Complete
+  m_Name: Completion Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19982,7 +19959,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 300}
-  m_SizeDelta: {x: 1500, y: 100}
+  m_SizeDelta: {x: 1100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8807540946668120268
 CanvasRenderer:

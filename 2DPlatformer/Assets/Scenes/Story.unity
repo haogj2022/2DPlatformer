@@ -614,9 +614,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'THEREFORE, PEOPLE
+  m_text: 'COULD YOU HELP HIM
 
-    OFTEN CALLED HIM:'
+    DEFEAT THE GHOSTS?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac09389c8b5eccd498fbfd00ebbc8aba, type: 2}
   m_sharedMaterial: {fileID: -3250799988189119, guid: ac09389c8b5eccd498fbfd00ebbc8aba, type: 2}
@@ -1020,7 +1020,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'THERE WAS A KNIGHT
 
-    AFRAID OF GHOSTS.'
+    AFRAID OF GHOSTS'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac09389c8b5eccd498fbfd00ebbc8aba, type: 2}
   m_sharedMaterial: {fileID: -3250799988189119, guid: ac09389c8b5eccd498fbfd00ebbc8aba, type: 2}

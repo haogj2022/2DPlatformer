@@ -4,16 +4,16 @@ using UnityEngine.SceneManagement;
 public class Story : MonoBehaviour
 {
     public GameObject skipButton;
+    private float delay = 2f;
 
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
 
-    // show skip button after 2 seconds
     private void Start()
     {
-        Invoke("ShowSkipButton", 2f);
+        Invoke("ShowSkipButton", delay);
     }
 
     private void ShowSkipButton()

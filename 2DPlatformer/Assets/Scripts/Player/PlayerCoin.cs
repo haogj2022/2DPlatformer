@@ -11,11 +11,11 @@ public class PlayerCoin : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Coin")) // Check if the player collides with the coin
+        if (collision.CompareTag("Coin")) 
         {
-            coinCount += coinValue; // Increment the coin count
-            coinText.text = coinCount.ToString(); // Update the UI text with the coin value
-            Destroy(collision.gameObject); // Destroy the coin object
+            coinCount += coinValue; 
+            coinText.text = coinCount.ToString(); 
+            Destroy(collision.gameObject);
         }
     }
 }

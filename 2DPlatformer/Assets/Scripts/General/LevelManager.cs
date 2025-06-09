@@ -5,6 +5,7 @@ public class LevelManager : MonoBehaviour
 {
     public List<GameObject> levels;
     private int selectedLevel;
+    private float delay = 1.2f;
 
     private void Start()
     {
@@ -14,7 +15,7 @@ public class LevelManager : MonoBehaviour
     public void SelectLevel(int levelIndex)
     {
         selectedLevel = levelIndex;
-        Invoke("LoadLevel", 1.2f); // Delay to ensure the level is selected before loading
+        Invoke("LoadLevel", delay); 
     }
 
     private void LoadLevel()

@@ -5,6 +5,7 @@ public class OptionsMenu : MonoBehaviour
 {
     public Animator optionsMenu;
     public Animator transition;
+    private float delay = 1f;
 
     public void OpenOptions()
     {
@@ -19,7 +20,7 @@ public class OptionsMenu : MonoBehaviour
     public void MainMenu()
     {
         transition.SetTrigger("Play");
-        Invoke("LoadMainMenu", 1f); // Wait for the animation to finish before loading the scene
+        Invoke("LoadMainMenu", delay);
     }
 
     private void LoadMainMenu()

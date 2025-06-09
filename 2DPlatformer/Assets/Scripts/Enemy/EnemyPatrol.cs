@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
-    public Transform[] waypoints; // Assign waypoints from the editor
-    private int waypointIndex = 0;
+    public Transform[] waypoints;
+    private int waypointIndex;
     public float moveSpeed = 3f;
-    public bool flipEnabled = true; // Option to enable or disable flipping
+    public bool flipEnabled = true;
+    private float distanceThreshold = 0.1f;
 
     void Update()
     {
@@ -15,7 +16,7 @@ public class EnemyPatrol : MonoBehaviour
 
     void MoveToNextWaypoint()
     {
-        if (waypoints.Length > 0) // Check if waypoints are assigned
+        if (waypoints.Length > 0)
         {
             if (waypointIndex < waypoints.Length)
             {
@@ -24,12 +25,12 @@ public class EnemyPatrol : MonoBehaviour
 
                 transform.position = Vector2.MoveTowards(currentPosition, targetPosition, moveSpeed * Time.deltaTime);
 
-                if (Vector2.Distance(currentPosition, targetPosition) < 0.1f) // Use a small tolerance for reaching the waypoint
+                if (Vector2.Distance(currentPosition, targetPosition) < distanceThreshold)
                 {
                     waypointIndex++;
                     if (waypointIndex >= waypoints.Length)
                     {
-                        waypointIndex = 0; // Reset to start if loop is desired
+                        waypointIndex = 0;
                     }
                 }
             }
@@ -45,11 +46,11 @@ public class EnemyPatrol : MonoBehaviour
                 Vector2 targetPosition = waypoints[waypointIndex].position;
                 if (targetPosition.x < transform.position.x)
                 {
-                    transform.localScale = new Vector3(-1, 1, 1); // Flip left
+                    transform.localScale = new Vector3(-1, 1, 1);
                 }
                 else
                 {
-                    transform.localScale = new Vector3(1, 1, 1); // Flip right
+                    transform.localScale = new Vector3(1, 1, 1);
                 }
             }
         }

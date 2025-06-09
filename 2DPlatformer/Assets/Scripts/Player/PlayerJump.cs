@@ -6,6 +6,9 @@ public class PlayerJump : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
 
+    [HideInInspector]
+    public int enemiesKilled;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -51,6 +54,7 @@ public class PlayerJump : MonoBehaviour
         if (other.CompareTag("EnemyHead") && rb.velocity.y < 0)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            enemiesKilled++;
         }
     }
 }
