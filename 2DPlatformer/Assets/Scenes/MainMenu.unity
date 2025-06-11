@@ -688,12 +688,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 287838694}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: SelectLevel
+        m_MethodName: IndexLevel
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4362,6 +4362,76 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130476076}
   m_CullTransparentMesh: 1
+--- !u!1 &1151796814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1151796816}
+  - component: {fileID: 1151796815}
+  m_Layer: 0
+  m_Name: Star Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1151796815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151796814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8426d9804c8b12440b92c906a086d13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelStars:
+  - level: {fileID: 159387873}
+    stars:
+    - {fileID: 443585052}
+    - {fileID: 961318490}
+    - {fileID: 328205577}
+  - level: {fileID: 1493835187}
+    stars:
+    - {fileID: 452990938}
+    - {fileID: 227834}
+    - {fileID: 934954575}
+  - level: {fileID: 1839914657}
+    stars:
+    - {fileID: 1773029080}
+    - {fileID: 1064378359}
+    - {fileID: 717713150}
+  - level: {fileID: 1819792173}
+    stars:
+    - {fileID: 1513199372}
+    - {fileID: 1847555992}
+    - {fileID: 1650502168}
+  - level: {fileID: 2127376235}
+    stars:
+    - {fileID: 1915605919}
+    - {fileID: 106871015}
+    - {fileID: 559960092}
+--- !u!4 &1151796816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151796814}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1189563098
 GameObject:
   m_ObjectHideFlags: 0
@@ -4856,12 +4926,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 287838694}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: SelectLevel
+        m_MethodName: IndexLevel
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5503,7 +5573,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 287838694}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: SelectLevel
+        m_MethodName: IndexLevel
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5637,12 +5707,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 287838694}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: SelectLevel
+        m_MethodName: IndexLevel
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6859,12 +6929,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 287838694}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: SelectLevel
+        m_MethodName: IndexLevel
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6915,3 +6985,4 @@ SceneRoots:
   - {fileID: 287838693}
   - {fileID: 827701916}
   - {fileID: 2058012459}
+  - {fileID: 1151796816}

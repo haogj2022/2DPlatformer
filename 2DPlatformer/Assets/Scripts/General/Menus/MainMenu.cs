@@ -9,12 +9,12 @@ public class MainMenu : MonoBehaviour
     private bool canSelectLevel = true;
     private float delay = 1f;
 
-    public void SelectLevel(int levelIndex)
+    public void IndexLevel(int levelIndex)
     {
-        if (levelIndex > 0 && canSelectLevel)
+        if (canSelectLevel)
         {
             canSelectLevel = false;
-            levelManager.SelectLevel(levelIndex - 1);
+            levelManager.SelectLevel(levelIndex);
             transition.SetTrigger("Play");
             Invoke("LoadGame", delay);
         }

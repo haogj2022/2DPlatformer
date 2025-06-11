@@ -5,11 +5,11 @@ public class LevelManager : MonoBehaviour
 {
     public List<GameObject> levels;
     private int selectedLevel;
-    private float delay = 1.2f;
+    private float delay = 1.1f;
 
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(this);
     }
 
     public void SelectLevel(int levelIndex)
@@ -20,9 +20,14 @@ public class LevelManager : MonoBehaviour
 
     private void LoadLevel()
     {
-        if (levels.Count > 0)
+        if (selectedLevel < levels.Count)
         {
             Instantiate(levels[selectedLevel]);
         }
+    }
+
+    public void SetStars(int numOfStars)
+    {
+        PlayerPrefs.SetInt("LevelStars_" + selectedLevel, numOfStars);
     }
 }
