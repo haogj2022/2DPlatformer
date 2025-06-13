@@ -34,6 +34,7 @@ public class DialogueNPC : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            StopAllCoroutines();
             isDialogueActive = false;
             dialoguePanel.SetActive(false);
             ZeroText();
