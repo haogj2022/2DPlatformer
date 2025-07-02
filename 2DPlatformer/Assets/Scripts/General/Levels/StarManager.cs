@@ -10,6 +10,15 @@ public class LevelStar
     public List<Image> stars;
 }
 
+public class PlayerData
+{
+    public int LevelStars_1;
+    public int LevelStars_2;
+    public int LevelStars_3;
+    public int LevelStars_4;
+    public int LevelStars_5;
+}
+
 public class StarManager : MonoBehaviour
 {
     public List<LevelStar> LevelStars;
@@ -22,6 +31,11 @@ public class StarManager : MonoBehaviour
 
     void UpdateStars()
     {
+        PlayerData playerData = JsonUtility.FromJson<PlayerData>(PlayerPrefs.GetString("PlayerData", "{}"));
+
+        playerData.LevelStars_1 = 2;
+
+        PlayerPrefs.SetString("PLayerData", JsonUtility.ToJson(playerData));
         for (int i = 0; i < LevelStars.Count; i++)
         {
             PlayerPrefs.GetInt("LevelStars_" + i);
