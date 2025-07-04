@@ -28,6 +28,9 @@ public class LevelManager : MonoBehaviour
 
     public void SetStars(int numOfStars)
     {
-        PlayerPrefs.SetInt("LevelStars_" + selectedLevel, numOfStars);
+        PlayerData playerData = JsonUtility.FromJson<PlayerData>(PlayerPrefs.GetString("PlayerData", "{}"));
+        playerData.StarData[selectedLevel] = numOfStars;
+        PlayerPrefs.SetString("PlayerData", JsonUtility.ToJson(playerData));
+        PlayerPrefs.Save();
     }
 }

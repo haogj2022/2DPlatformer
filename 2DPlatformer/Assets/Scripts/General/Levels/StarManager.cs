@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,11 +11,7 @@ public class LevelStar
 
 public class PlayerData
 {
-    public int LevelStars_1;
-    public int LevelStars_2;
-    public int LevelStars_3;
-    public int LevelStars_4;
-    public int LevelStars_5;
+    public int[] StarData = new int[5];
 }
 
 public class StarManager : MonoBehaviour
@@ -33,15 +28,11 @@ public class StarManager : MonoBehaviour
     {
         PlayerData playerData = JsonUtility.FromJson<PlayerData>(PlayerPrefs.GetString("PlayerData", "{}"));
 
-        playerData.LevelStars_1 = 2;
-
-        PlayerPrefs.SetString("PLayerData", JsonUtility.ToJson(playerData));
         for (int i = 0; i < LevelStars.Count; i++)
         {
-            PlayerPrefs.GetInt("LevelStars_" + i);
             for (int j = 0; j < LevelStars[i].stars.Count; j++)
             {
-                if (j < PlayerPrefs.GetInt("LevelStars_" + i))
+                if (j < playerData.StarData[i])
                 {
                     LevelStars[i].stars[j].color = Color.white;
                     LevelStars[i + 1].level.interactable = true;
@@ -54,7 +45,10 @@ public class StarManager : MonoBehaviour
     {
         for (int i = 0; i < LevelStars.Count; i++)
         {
-            PlayerPrefs.SetInt("LevelStars_" + i, 0);
+            PlayerData playerData = JsonUtility.FromJson<PlayerData>(PlayerPrefs.GetString("PlayerData", "{}"));
+            playerData.StarData = new int[5];
+            PlayerPrefs.SetString("PlayerData", JsonUtility.ToJson(playerData));
+
             for (int j = 0; j < LevelStars[i].stars.Count; j++)
             {
                 LevelStars[i].stars[j].color = Color.grey;
