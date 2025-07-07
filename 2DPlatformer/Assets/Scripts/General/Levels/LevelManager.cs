@@ -4,12 +4,24 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public List<GameObject> levels;
-    private int selectedLevel;
+
+    [HideInInspector]
+    public int selectedLevel;
+
     private float delay = 1.1f;
 
-    private void Start()
+    private void Awake()
     {
         DontDestroyOnLoad(this);
+        
+        LevelManager[] managers = FindObjectsOfType<LevelManager>();
+        if (managers.Length > 1)
+        {
+            for (int i = 1; i < managers.Length; i++)
+            {
+                Destroy(managers[i].gameObject);
+            }
+        }
     }
 
     public void SelectLevel(int levelIndex)

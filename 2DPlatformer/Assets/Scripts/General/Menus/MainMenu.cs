@@ -5,9 +5,14 @@ public class MainMenu : MonoBehaviour
 {
     public Animator mainMenu;
     public Animator transition;
-    public LevelManager levelManager;
+    private LevelManager levelManager;
     private bool canSelectLevel = true;
     private float delay = 1f;
+
+    void Start()
+    {
+        levelManager = FindObjectOfType<LevelManager>();
+    }
 
     public void IndexLevel(int levelIndex)
     {

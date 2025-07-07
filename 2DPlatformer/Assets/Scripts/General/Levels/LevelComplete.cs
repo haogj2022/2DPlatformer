@@ -55,6 +55,7 @@ public class LevelComplete : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             stopTimer = true;
+            playerRb.simulated = false;
             transition.SetTrigger("Play");
             ShowCompletionStats();
         }
@@ -72,8 +73,6 @@ public class LevelComplete : MonoBehaviour
 
     void ShowStarRatings()
     {
-        playerRb.simulated = false;
-
         if (levelManager != null)
         {
             completionStats.SetActive(true);

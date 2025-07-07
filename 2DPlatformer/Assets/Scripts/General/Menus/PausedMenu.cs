@@ -30,4 +30,13 @@ public class PausedMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void NextLevel()
+    {
+        Time.timeScale = 1;
+        LevelManager levelManager = FindObjectOfType<LevelManager>();
+        levelManager.selectedLevel++;
+        levelManager.SelectLevel(levelManager.selectedLevel);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

@@ -48,6 +48,7 @@ public class StarManager : MonoBehaviour
             PlayerData playerData = JsonUtility.FromJson<PlayerData>(PlayerPrefs.GetString("PlayerData", "{}"));
             playerData.StarData = new int[5];
             PlayerPrefs.SetString("PlayerData", JsonUtility.ToJson(playerData));
+            PlayerPrefs.Save();
 
             for (int j = 0; j < LevelStars[i].stars.Count; j++)
             {
